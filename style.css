@@ -1,95 +1,63 @@
 *{
-    margin:0;
-    padding : 0;
+    margin : 0; padding: 0 ; box-sizing: border-box;
 }
-html{
-    font-family: monospace;
+body{
+    background-color: #fceef5;
 }
-.text-center{
-    text-align: center;
-}
-.gameBoard {
-    width: 600px;
-    margin : 3rem 0;
-    display: grid;
-    grid-template-columns: repeat(3 , 1fr);
-    grid-auto-rows: 100px;
-}
-.one , .two , .three , .four , .five , .six {
-    border-bottom: 4px solid black;
-}
-.one , .two , .four , .five  , .seven , .eight{
-    border-right: 4px solid black;
-}
-.three , .six {
-    border-bottom : 4px solid black ;
-} 
-.gameMenu {
-    margin-top:50px;
-    position: relative;
-}
-.gameMenu h3{
-    line-height: 24px;
-}
-.gameMenu button {
-    margin-top : 1.5rem;
-    color : white;
-    background-color: #04AA6D;
-    border : 3px solid #04AA6D;
-    border-radius: 6px;
-    padding : 0.5rem 0.75rem;
-    cursor: pointer;
-}
-.gameMenu button:hover {
-    margin-top : 1.5rem;
-    color : #04AA6D ;
-    background-color: white;
-    border : 3px solid #04AA6D;
-    border-radius: 6px;
-    padding : 0.5rem 0.75rem;
-    cursor: pointer;
-}
-
-.area{
+.container{
+    max-width: 1200px;
+    margin : 0 auto;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.area span {
-    font-size: 50px;
+.counter-app{
+    width: 400px;
+    padding : 2rem;
+    color : #eee;
+    background-color: #11698e;
+    border-radius: 5px;
 }
-.info {
-    position : absolute ;
-    top : -200px;
-    left :450px;
-    margin : 0 auto;
-    width:150px; background-color:#fff;  
-    border :3px solid grey;
-    border-left:6px solid #04aa6d ;
-    border-radius : 5px;
-    padding : 0.25rem 0.75rem;
-    animation-name: info;
-    animation-duration: .8s;
-    animation-timing-function: cubic-bezier(0.075, 0.82, 0.3, 1);
-    animation-iteration-count: 2;
-    animation-direction: alternate ;
-    }
-
-    @keyframes info {
-    0%{ top: -200px;
-    }
-    100%{
-        top : 0px;
-    }
+.counter-app h2{
+    text-align: center;
+}
+.counter-app  > span {
+    display: block;
+    text-align: center;
+    margin-top : 1rem;
+    font-size : 3rem ;
+}
+.counter-app .buttons{
+    width: 100%;
+    padding : 1rem 0;
+    margin-top : 1rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.counter-app button {
+    border : 0;
+    outline:  0;
+    cursor: pointer;
+    padding : 0.5rem 0.75rem;
+    border-radius : 4px;
+    margin-right : 1.1rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    color :white;
+}
+.counter-app button img {
+    width: 24px;
+    margin-right: 0.3rem;
 }
 
-.container{
-    max-width: 1200px;
-    margin : 0 auto;
+.add{
+    background-color: #be4747;
 }
-
-footer {
-    position : fixed;
-    bottom : 10px ;
-    right : 10px;
+.reset {
+    background-color: #e6e6e6;
+}
+.subtract{
+    background-color: #fad662;
 }
